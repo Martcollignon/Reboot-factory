@@ -1,4 +1,61 @@
+/* Basic CSS */
 body {
 	margin: 0 auto;
 	padding: 0;
+	background: #F6F6F6;
+	font-family:  Arial, Helvetica, sans-serif;
+}
+main{
+	width:250px;
+	margin: auto;
+	margin-top: 20px;
+}
+h1{
+	text-align: center;
+	font-size: 16pt;
+}
+h2{
+	text-align: center;
+	font-size: 16pt;
+}
+
+
+
+/* Class */
+/* Toolbar */
+.toolbar{
+	background: #40A9DB;
+	height:44px;
+	position: relative;
+	padding: 0px 8px;
+}
+.toolbar_text{
+	color: white;
+	text-align: center;
+	font-size: 16pt;
+	padding: 8px 0px 0px 0px
+}
+.toolbar_return{
+	position: absolute;
+	background-image: url(icons/previous.png);
+	width: 22px;
+	height: 22px;
+	top: 9px;
+}
+.toolbar_trash{
+	position: absolute;
+	background-image: url(icons/trash.png);
+	width: 22px;
+	height: 22px;
+	top: 9px;
+	right: 0px;
+}
+
+ul{
+	padding: 0;
+	list-style: none;
+}
+li{
+	padding: 14px;
+	border-bottom: 1px dashed #b9b0b0
 }
