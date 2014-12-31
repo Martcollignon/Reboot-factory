@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-		<link rel="apple-touch-startup-image" href="apple-touch-startup-image.png">
+	
+<head>
+		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.html">
+		<link rel="apple-touch-startup-image" href="apple-touch-startup-image.html">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> <!--Lien pour CSS de l'autocomplete liste -->
+    	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		
-		<title> Mon site. </title>
+		<title> EasyBuy - Achetez en toute simplicité. </title>
 		<meta name="apple-mobile-web-app-title" content="Super App">
 		<meta charset="UTF-8" />
 
@@ -17,15 +21,16 @@
 		<meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
 
 		<!-- POLICE -->
-		<script src="//use.typekit.net/fsk5dnr.js"></script>
+		<script src="../../use.typekit.net/fsk5dnr.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
 
 	</head>
 
 	<body>
 		<section class="toolbar">
-			<a href="" class="toolbar_return"> </a>
+			<a href="mes_listes.html" class="toolbar_return"> </a>
 			<div class="toolbar_text"> Mes listes </div>
+			<a href="mes_listes.html" class="toolbar_valid"> </a>
 		</section>
 		
 		<main>
@@ -34,9 +39,9 @@
 			</form>
 			
 			<ul class="sous_list">
-				<li>Laitue <a href="" class="sous_list_suppr"> </a> </li>
-				<li>fromage <a href="" class="sous_list_suppr"> </a> </li>
-				<li>Durex <a href="" class="sous_list_suppr"> </a> </li>
+				<li id="laitue">Laitue <a href="#" class="sous_list_suppr"> </a> </li>
+				<li id="fromage">fromage <a href="#" class="sous_list_suppr"> </a> </li>
+				<li id="durex">Durex <a href="#" class="sous_list_suppr"> </a> </li>
 			</ul>
 				
 		</main>
@@ -46,4 +51,153 @@
 		
 
 	</body>
+
+	 <script>
+
+	 /* SCRIPT AUTOCOMPLETE LISTE */
+
+    var data = [
+      "abricot",
+      "agneau",
+      "amandes",
+      "ananas",
+      "anchois",
+      "apéritifs",
+      "armagnac",
+      "artichaut",
+      "aubergine",
+      "avocat",
+      "avoine",
+      "baguette",
+      "banane",
+      "bar",
+      "betterave",
+      "bière",
+      "blé",
+      "bœuf",
+      "bonbons",
+      "brochet",
+      "brocoli",
+      "cabillaud",
+      "cacahuètes",
+      "café",
+      "caramel",
+      "carotte",
+      "carpe",
+      "céleri",
+      "cerise",
+      "châtaignes",
+      "chou",
+      "chou de Bruxelles",
+      "chou-fleur",
+      "cidre",
+      "clémentine",
+      "cocktails",
+      "cognac",
+      "colin",
+      "compote",
+      "concombre",
+      "confiture",
+      "courge",
+      "courgette",
+      "crème glacée",
+      "daurade",
+      "eau",
+      "endive",
+      "fenouil",
+      "figue",
+      "fraise",
+      "framboise",
+      "gibier",
+      "halva",
+      "hareng",
+      "jus de fruits",
+      "kiwi",
+      "lait",
+      "lait de soja",
+      "lapin",
+      "Levain",
+      "levure",
+      "limande",
+      "liqueur",
+      "maïs",
+      "mandarine",
+      "mangue",
+      "maquereau",
+      "marron",
+      "melon",
+      "merlan",
+      "miel",
+      "morue",
+      "mouton",
+      "myrtille",
+      "nectarine",
+      "noisettes",
+      "noix",
+      "orange",
+      "orge",
+      "ortie",
+      "pain",
+      "pamplemousse",
+      "papaye",
+      "patate",
+      "pâtisserie",
+      "pêche",
+      "poire",
+      "poireau",
+      "poivron",
+      "pomme",
+      "pommes de terre",
+      "porc",
+      "poulet",
+      "prune",
+      "radis",
+      "raisin",
+      "riz",
+      "saké",
+      "sardine",
+      "sarrasin",
+      "saumon",
+      "seigle",
+      "sole",
+      "sorbet",
+      "sucre",
+      "thé",
+      "tisane",
+      "truite",
+      "veau",
+      "vin",
+      "volaille"
+        ];
+      
+    $(document).ready(
+      function () {
+        $( "#produit" ).autocomplete({
+          source:data,
+          autoFocus: true ,
+
+        });
+      }
+
+    );
+
+</script>
+<script>
+
+$(function() {                       //run when the DOM is ready
+  $("#laitue").click(function() {  //use a class, since your ID gets mangled
+    $("#laitue").remove();
+  });
+
+   $("#fromage").click(function() {  //use a class, since your ID gets mangled
+    $("#fromage").remove();
+  });
+
+   $("#durex").click(function() {  //use a class, since your ID gets mangled
+    $("#durex").remove();
+  });
+});
+
+</script>
+
 </html>
