@@ -2,202 +2,59 @@
 <html lang="fr">
 	
 <head>
-		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.html">
+		<link rel="apple-touch-icon-precomposed" href="_images/icon180.png">
 		<link rel="apple-touch-startup-image" href="apple-touch-startup-image.html">
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> <!--Lien pour CSS de l'autocomplete liste -->
-    		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		
-		<title> EasyBuy - Achetez en toute simplicité. </title>
-		<meta name="apple-mobile-web-app-title" content="Super App">
+		<title>Créer | Easy Buy | Achetez en toute simplicité</title>
+		<meta name="apple-mobile-web-app-title" content="Easy Buy">
 		<meta charset="UTF-8" />
 
 		<link rel="stylesheet" type="text/css" href="_styles/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="_styles/style.css" />
+		<link rel="stylesheet" href="_styles/jquery-ui.css" /> 
 
 		<meta name="viewport" content="user-scalable=no,initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<!-- POLICE -->
-		<script src="../../use.typekit.net/fsk5dnr.js"></script>
+		<script src="//use.typekit.net/fcy0qbe.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
 
 	</head>
 
 	<body>
-    <header class="toolbar">
-      <button class="toolbar--picto toolbar--picto__return"></button>
-      <h1 class="toolbar--h1">Mes listes</h1>
-      <button class="toolbar--picto toolbar--picto__valid"></button>
-    </header>
+	<header class="toolbar">
+	  <a href="index.html" class="btn btn--picto btn--picto__return"></a>
+	  <h1 class="toolbar--h1">Mes listes</h1>
+	  <a href="listes.html" class="btn btn--picto btn--picto__valid"></a>
+	</header>
 		
-		<main>
+		<section class="section">
 			<form action="#" method="post">
-				<input type="text" name="produit" id="produit" required="required" />
+				<input class="input input__add" type="text" name="produit" id="produit" placeholder="Ajouter un article" />
 			</form>
 			
-			<ul class="sous_list">
-				<li id="laitue">Laitue <a href="#" class="sous_list_suppr"> </a> </li>
-				<li id="fromage">fromage <a href="#" class="sous_list_suppr"> </a> </li>
-				<li id="durex">Durex <a href="#" class="sous_list_suppr"> </a> </li>
+			<ul class="list list__article">
+				<li class="list--element">
+					Laitue
+					<a class="list--small list--small__delete" href="#">Supprimer</a>
+				</li>
+				<li class="list--element">
+					Fromage
+					<a class="list--small list--small__delete" href="#">Supprimer</a>
+				</li>
+				<li class="list--element">
+					Durex
+					<a class="list--small list--small__delete" href="#">Supprimer</a>
+				</li>
 			</ul>
 				
-		</main>
+		</section>
 
-		
-
-		
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="_script/main.js"></script>
 
 	</body>
-
-	 <script>
-
-	 /* SCRIPT AUTOCOMPLETE LISTE */
-
-    var data = [
-      "abricot",
-      "agneau",
-      "amandes",
-      "ananas",
-      "anchois",
-      "apéritifs",
-      "armagnac",
-      "artichaut",
-      "aubergine",
-      "avocat",
-      "avoine",
-      "baguette",
-      "banane",
-      "bar",
-      "betterave",
-      "bière",
-      "blé",
-      "bœuf",
-      "bonbons",
-      "brochet",
-      "brocoli",
-      "cabillaud",
-      "cacahuètes",
-      "café",
-      "caramel",
-      "carotte",
-      "carpe",
-      "céleri",
-      "cerise",
-      "châtaignes",
-      "chou",
-      "chou de Bruxelles",
-      "chou-fleur",
-      "cidre",
-      "clémentine",
-      "cocktails",
-      "cognac",
-      "colin",
-      "compote",
-      "concombre",
-      "confiture",
-      "courge",
-      "courgette",
-      "crème glacée",
-      "daurade",
-      "eau",
-      "endive",
-      "fenouil",
-      "figue",
-      "fraise",
-      "framboise",
-      "gibier",
-      "halva",
-      "hareng",
-      "jus de fruits",
-      "kiwi",
-      "lait",
-      "lait de soja",
-      "lapin",
-      "Levain",
-      "levure",
-      "limande",
-      "liqueur",
-      "maïs",
-      "mandarine",
-      "mangue",
-      "maquereau",
-      "marron",
-      "melon",
-      "merlan",
-      "miel",
-      "morue",
-      "mouton",
-      "myrtille",
-      "nectarine",
-      "noisettes",
-      "noix",
-      "orange",
-      "orge",
-      "ortie",
-      "pain",
-      "pamplemousse",
-      "papaye",
-      "patate",
-      "pâtisserie",
-      "pêche",
-      "poire",
-      "poireau",
-      "poivron",
-      "pomme",
-      "pommes de terre",
-      "porc",
-      "poulet",
-      "prune",
-      "radis",
-      "raisin",
-      "riz",
-      "saké",
-      "sardine",
-      "sarrasin",
-      "saumon",
-      "seigle",
-      "sole",
-      "sorbet",
-      "sucre",
-      "thé",
-      "tisane",
-      "truite",
-      "veau",
-      "vin",
-      "volaille"
-        ];
-      
-    $(document).ready(
-      function () {
-        $( "#produit" ).autocomplete({
-          source:data,
-          autoFocus: true ,
-
-        });
-      }
-
-    );
-
-</script>
-<script>
-
-$(function() {                       //run when the DOM is ready
-  $("#laitue").click(function() {  //use a class, since your ID gets mangled
-    $("#laitue").remove();
-  });
-
-   $("#fromage").click(function() {  //use a class, since your ID gets mangled
-    $("#fromage").remove();
-  });
-
-   $("#durex").click(function() {  //use a class, since your ID gets mangled
-    $("#durex").remove();
-  });
-});
-
-</script>
-
 </html>

@@ -4,7 +4,7 @@
 		<link rel="apple-touch-icon-precomposed" href="_images/icon180.png">
 		<link rel="apple-touch-startup-image" href="apple-touch-startup-image.png">
 		
-		<title>Recherche | Easy Buy | Achetez en toute simplicité</title>
+		<title>Mes listes | Easy Buy | Achetez en toute simplicité</title>
 		<meta name="apple-mobile-web-app-title" content="Easy Buy">
 		<meta charset="UTF-8" />
 
@@ -19,13 +19,41 @@
 	</head>
 
 	<body>
+
+<!-- <section id="creer" class="body"> -->
 		<header class="toolbar">
-			<a href="listes.html" class="btn btn--picto btn--picto__return"></a>
-			<h1 class="toolbar--h1">Mon magasin</h1>
+			<a href="creer.html" class="btn btn--picto btn--picto__return"></a>
+			<h1 class="toolbar--h1">Mes listes</h1>
+			<a class="btn btn--picto btn--picto__trash"></a>
 		</header>
 		
 		<section class="section">
-			<!-- <h1 class="section--h1"> Où faites vous vos courses ? </h1> -->
+			<ul class="list">
+				<li class="list--title">
+					Poulet curry
+					<button href="#" class="btn btn--picto btn--picto__edit"></button>
+				</li>
+				<ul class="sous_list">
+					<li class="list--element list--element__article"> cornichon </li>
+					<li class="list--element list--element__article">citron vert</li>
+					<li class="list--element list--element__article">Hamburgers</li>
+				</ul>
+				<li class="list--title">Courses du 24/01</li>
+				<li class="list--title">Tagliatelles au saumon</li>
+			</ul>
+
+			<a href="recherche.html" class="btn btn--cta">Faire les courses</a>
+
+		</section>
+<!-- </section> -->
+
+<!-- <section id="recherche" class="body">
+		<header class="toolbar">
+			<a href="#creer" class="toolbar--picto toolbar--picto__return"></a>
+			<h1 class="toolbar--h1">Mon magasin</h1>
+		</header>
+
+		<section class="section">
 			
 			<form action="#" method="post">
 				<input class="input input__search" type="search" name="magasin" id="magasin" placeholder="Où faites vous vos courses ?" />
@@ -54,6 +82,7 @@
 				</ul>
 				
 		</section>
+</section> -->
 
 	</body>
 </html>
