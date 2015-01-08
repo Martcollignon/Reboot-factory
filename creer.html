@@ -18,9 +18,6 @@
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<script src="//use.typekit.net/fcy0qbe.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
-
 	</head>
 
 	<body>
@@ -31,29 +28,19 @@
 	</header>
 		
 		<section class="section">
-			<form action="#" method="post">
-				<input class="input input__add" type="text" name="produit" id="produit" placeholder="Ajouter un article" />
+
+			<form action="#" method="post" onsubmit="addValueToList(event);">
+				<input id="addproduct" class="input" type="text" name="produit" placeholder="Ajouter un article" />
+				<button type="submit" class="input__add"></button>
 			</form>
 			
-			<ul class="list list__article">
-				<li class="list--element">
-					Laitue
-					<a class="list--small list--small__delete" href="#">Supprimer</a>
-				</li>
-				<li class="list--element">
-					Fromage
-					<a class="list--small list--small__delete" href="#">Supprimer</a>
-				</li>
-				<li class="list--element">
-					Durex
-					<a class="list--small list--small__delete" href="#">Supprimer</a>
-				</li>
-			</ul>
+			<ul id="maListe" class="list list__article"></ul>
 				
 		</section>
 
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script defer src="_script/localstorage.js"></script>
 		<script src="_script/main.js"></script>
 
 	</body>
